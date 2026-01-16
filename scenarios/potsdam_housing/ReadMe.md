@@ -1,4 +1,4 @@
-# 📡 Project R.A.D.A.R. (Potsdam)
+# Project R.A.D.A.R. (Potsdam)
 **Rent Anomaly Detection And Resolution**
 
 **Course:** M. Grum: Advanced AI-based Application Systems
