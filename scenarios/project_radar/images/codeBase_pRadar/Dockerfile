@@ -1,5 +1,13 @@
 FROM python:3.9-slim
+
 WORKDIR /app
-COPY code /app
-RUN pip install pandas tensorflow
+
+# Install stable, compatible stack
+COPY requirements.txt /app/
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy inference code
+COPY images/codeBase_pRadar/code/ /app/
+
 CMD ["python", "apply_model.py"]

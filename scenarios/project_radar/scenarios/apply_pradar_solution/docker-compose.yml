@@ -1,0 +1,21 @@
+volumes:
+  shared_data:
+
+services:
+  activation:
+    image: nairwitac/activationbase_pradar
+    volumes:
+      - shared_data:/tmp
+
+  knowledge:
+    image: nairwitac/knowledgebase_pradar
+    volumes:
+      - shared_data:/tmp
+
+  code:
+    image: nairwitac/codebase_pradar
+    volumes:
+      - shared_data:/tmp
+    depends_on:
+      - activation
+      - knowledge
