@@ -3,17 +3,17 @@ volumes:
 
 services:
   activation:
-    image: nairwitac/activationbase_pradar
+    image: ${DOCKER_NAMESPACE}/activationbase_pradar
     volumes:
       - shared_data:/tmp
 
   knowledge:
-    image: nairwitac/knowledgebase_pradar
+    image: ${DOCKER_NAMESPACE}/knowledgebase_pradar
     volumes:
       - shared_data:/tmp
 
   code:
-    image: nairwitac/codebase_pradar
+    image: ${DOCKER_NAMESPACE}/codebase_pradar
     volumes:
       - shared_data:/tmp
     depends_on:
